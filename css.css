@@ -117,4 +117,625 @@ body {
 /* Efeito sutil ao passar o mouse na imagem da dica */
 .dica-container img:hover {
     transform: scale(1.02);
+}/* =====================================================
+   Ícones (sprite SVG)
+   ===================================================== */
+.icones-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.icone {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.icone-lg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+/* Rolagem suave para o link do comunicado */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =====================================================
+   Faixa de aviso no topo (antes da localização)
+   ===================================================== */
+.faixa-aviso {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 780px;
+    margin: 0 auto 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #fffaf0;
+    border: 1px solid #ffe0a3;
+    border-left: 6px solid #ffb81c;
+    border-radius: 0.75rem;
+    text-align: left;
+    color: #4a4a4a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faixa-aviso .icone {
+    color: #d18b00;
+    margin-top: 2px;
+}
+
+.faixa-aviso p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #4a4a4a;
+}
+
+.faixa-aviso a {
+    color: #007c32;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.faixa-aviso a:hover {
+    color: #005c25;
+}
+
+/* =====================================================
+   Seção do Comunicado de Segurança
+   ===================================================== */
+.comunicado {
+    margin: 2rem 10%;
+    scroll-margin-top: 110px;
+}
+
+.comunicado-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    padding: 0 0 2.5rem;
+}
+
+/* Cabeçalho do comunicado */
+.comunicado-topo {
+    background: linear-gradient(135deg, #007c32 0%, #005c25 100%);
+    color: #fff;
+    padding: 2rem 2.5rem 3.75rem;
+    text-align: center;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #ffb81c;
+    color: #17331f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.comunicado-topo h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+}
+
+.comunicado-topo .comunicado-local {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #e7f8ea;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+/* Blocos internos */
+.comunicado-card > .bloco,
+.comunicado-card > .regras,
+.comunicado-card > .fecho,
+.comunicado-card > .mapas {
+    margin: 2rem 2.5rem 0;
+}
+
+.comunicado-card p {
+    color: #4a4a4a;
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.comunicado-card strong {
+    color: #1f2d24;
+}
+
+.bloco-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.25rem;
+    color: #007c32;
+    margin-bottom: 0.9rem;
+}
+
+.bloco-titulo .icone {
+    color: #ffb81c;
+    stroke-width: 2.2;
+}
+
+.bloco-intro {
+    margin-bottom: 1rem;
+    color: #6a6a6a !important;
+}
+
+/* Alerta "Atenção Motoristas" */
+.alerta {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    margin: -1.5rem 2.5rem 0;
+    padding: 1.5rem 1.75rem;
+    background: #fff5f4;
+    border: 1px solid #ffd7d2;
+    border-left: 6px solid #d93025;
+    border-radius: 0.85rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.alerta .icone {
+    color: #d93025;
+    margin-top: 2px;
+}
+
+.alerta h3 {
+    font-size: 1.2rem;
+    color: #b3261e;
+    margin-bottom: 0.45rem;
+}
+
+.alerta p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Bloco da rota */
+.bloco-rota {
+    background: #f1f9f3;
+    border: 1px solid #cfe9d6;
+    border-radius: 0.85rem;
+    padding: 1.4rem 1.6rem;
+}
+
+.bloco-rota p {
+    margin: 0;
+}
+
+.destaque-verde {
+    background: #cdefd7;
+    color: #005c25;
+    font-weight: 700;
+    padding: 0.1rem 0.45rem;
+    border-radius: 0.35rem;
+    white-space: nowrap;
+}
+
+/* Lista de EPI's */
+.epi-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    list-style: none;
+}
+
+.epi-lista li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f4f4f4;
+    border: 1px solid #e6e6e6;
+    border-radius: 999px;
+    padding: 0.55rem 1.1rem 0.55rem 0.7rem;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.icone-check {
+    width: 1rem;
+    height: 1rem;
+    color: #007c32;
+    stroke-width: 3;
+}
+/* =====================================================
+   Regras (Estacionamento / Velocidade)
+   ===================================================== */
+.regras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.regra {
+    background: #fff;
+    border: 1px solid #ececec;
+    border-top: 4px solid #007c32;
+    border-radius: 0.85rem;
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.regra:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 124, 50, 0.12);
+}
+
+.regra h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    color: #007c32;
+    margin-bottom: 1rem;
+}
+
+.regra h3 .icone {
+    color: #ffb81c;
+    stroke-width: 2.2;
+}
+
+.regra ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.regra li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: #4a4a4a;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.regra li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #007c32;
+}
+
+/* Card do limite de velocidade */
+.regra-limite {
+    border-top-color: #ffb81c;
+}
+
+.regra-limite h3 {
+    color: #b3261e;
+}
+
+.limite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+    margin: 0 auto 1.25rem;
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    background: #fff;
+    border: 6px solid #d93025;
+    color: #b3261e;
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 0;
+    box-shadow: inset 0 0 0 4px #fff, 0 6px 18px rgba(217, 48, 37, 0.18);
+}
+
+.limite span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #d93025;
+}
+
+/* =====================================================
+   Medidas em caso de descumprimento
+   ===================================================== */
+.bloco-medidas > p {
+    margin-bottom: 1.25rem;
+}
+
+.medidas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.medidas li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fafafa;
+    border: 1px solid #ececec;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+}
+
+.medidas strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+}
+
+.medidas p {
+    margin: 0;
+    font-size: 0.97rem;
+    color: #5a5a5a;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: #ffb81c;
+    color: #17331f;
+    font-weight: 800;
+    font-size: 1.05rem;
+}
+
+.passo-grave {
+    background: #d93025;
+    color: #fff;
+}
+
+/* =====================================================
+   Fecho / Assinatura
+   ===================================================== */
+.fecho {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    background: #f1f9f3;
+    border: 1px solid #cfe9d6;
+    border-radius: 0.85rem;
+    padding: 1.5rem 1.75rem;
+}
+
+.fecho .icone {
+    color: #007c32;
+    margin-top: 2px;
+}
+
+.fecho h3 {
+    font-size: 1.2rem;
+    color: #007c32;
+    margin-bottom: 0.7rem;
+}
+
+.fecho p {
+    margin-bottom: 0.6rem;
+}
+
+.fecho p:last-child {
+    margin-bottom: 0;
+}
+
+.slogan {
+    font-weight: 700;
+    color: #005c25 !important;
+    font-size: 1.05rem !important;
+    margin-top: 0.9rem !important;
+}
+
+.assinatura {
+    margin: 2.25rem 2.5rem 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ececec;
+    text-align: center;
+}
+
+.assinatura p {
+    color: #6a6a6a;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.assinatura strong {
+    color: #007c32;
+    font-size: 1.05rem;
+}
+
+/* =====================================================
+   Mapas do Pátio
+   ===================================================== */
+.mapas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.mapas-grid figure {
+    margin: 0;
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 0.85rem;
+    overflow: hidden;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.mapas-grid a {
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+    background: #efefef;
+}
+
+.mapas-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.mapas-grid a:hover img {
+    transform: scale(1.03);
+}
+
+.mapas-grid figcaption {
+    padding: 1rem 1.15rem 1.15rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #5a5a5a;
+}
+
+.mapas-grid figcaption strong {
+    display: block;
+    color: #007c32;
+    font-size: 0.98rem;
+    margin-bottom: 0.3rem;
+}
+
+.mapas-dica {
+    margin-top: 0.9rem;
+    font-size: 0.88rem !important;
+    color: #8a8a8a !important;
+    text-align: center;
+}
+
+/* =====================================================
+   Responsivo
+   ===================================================== */
+@media (max-width: 900px) {
+    .comunicado {
+        margin: 2rem 5%;
+    }
+
+    .comunicado-card > .bloco,
+    .comunicado-card > .regras,
+    .comunicado-card > .fecho,
+    .comunicado-card > .mapas {
+        margin: 1.75rem 1.5rem 0;
+    }
+
+    .alerta,
+    .assinatura {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .alerta {
+        margin-top: -1.25rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .locs {
+        padding: 1.5rem 5%;
+    }
+
+    .Localizacoes {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .comunicado-topo {
+        padding: 1.6rem 1.25rem 3.25rem;
+    }
+
+    .comunicado-topo h2 {
+        font-size: 1.5rem;
+    }
+
+    .comunicado-local {
+        font-size: 0.9rem;
+    }
+
+    .comunicado-card {
+        padding-bottom: 1.75rem;
+    }
+
+    .comunicado-card > .bloco,
+    .comunicado-card > .regras,
+    .comunicado-card > .fecho,
+    .comunicado-card > .mapas {
+        margin: 1.5rem 1.15rem 0;
+    }
+
+    .alerta {
+        margin: -1.1rem 1.15rem 0;
+        padding: 1.15rem 1.15rem;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .fecho {
+        padding: 1.25rem 1.15rem;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .bloco-titulo {
+        font-size: 1.1rem;
+        align-items: flex-start;
+    }
+
+    .bloco-titulo .icone {
+        margin-top: 3px;
+    }
+
+    .regras {
+        grid-template-columns: 1fr;
+    }
+
+    .mapas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faixa-aviso {
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: 1rem 1.15rem;
+    }
+
+    .assinatura {
+        margin: 1.75rem 1.15rem 0;
+    }
+
+    .epi-lista li {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.9rem 0.5rem 0.6rem;
+    }
 }

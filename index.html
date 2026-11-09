@@ -7,32 +7,246 @@
     <title>Localização Usinas</title>
 </head>
 <body>
+
+    <!-- Sprite de ícones -->
+    <svg class="icones-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-alerta" viewBox="0 0 24 24">
+            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/>
+            <path d="M12 9v4"/><path d="M12 17h.01"/>
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+        </symbol>
+        <symbol id="i-rota" viewBox="0 0 24 24">
+            <circle cx="6" cy="19" r="3"/>
+            <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+            <circle cx="18" cy="5" r="3"/>
+        </symbol>
+        <symbol id="i-capacete" viewBox="0 0 24 24">
+            <path d="M2 18h20"/>
+            <path d="M4 18v-2a8 8 0 0 1 16 0v2"/>
+            <path d="M9.5 10V7"/><path d="M14.5 10V7"/>
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"/>
+        </symbol>
+        <symbol id="i-carro" viewBox="0 0 24 24">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H8c-.7 0-1.3.3-1.8.7L4 10s-2.7.6-4.5 1.1C.7 11.3 0 12.1 0 13v3c0 .6.4 1 1 1h2"/>
+            <circle cx="7" cy="17" r="2"/>
+            <path d="M9 17h6"/>
+            <circle cx="17" cy="17" r="2"/>
+        </symbol>
+        <symbol id="i-velocidade" viewBox="0 0 24 24">
+            <path d="m12 14 4-4"/>
+            <path d="M3.34 19a10 10 0 1 1 17.32 0"/>
+        </symbol>
+        <symbol id="i-escudo" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+            <path d="M12 8v4"/><path d="M12 16h.01"/>
+        </symbol>
+        <symbol id="i-escudo-check" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+            <path d="m9 12 2 2 4-4"/>
+        </symbol>
+    </svg>
+
     <header class="header">
         <a href="#" class="logo">
-            <img src="imagens/VALE_BIG-a760504d.png" alt="vale" width="150px">
+            <img src="imagens/VALE_BIG-a760504d.png" alt="Vale" width="150">
         </a>
     </header>
 
-    <section class="locs" id="locs">
-        <h2 class="Localizacoes">Localização - Pátio de Insumos</h2>
-        <div class="espaco">
-            <div class="linha">
-                <div class="barra">
-                    <div class="info">
-                        <a href="https://maps.app.goo.gl/QqJWcJ15hoZxmcUq8">
-                            <img src="imagens/location.gif" width="80px">
-                            Pátio de Insumos (Maps)
-                        </a>
+    <main>
+        <section class="locs" id="locs">
+            <h2 class="Localizacoes">Localização - Pátio de Insumos</h2>
+
+            <div class="faixa-aviso">
+                <svg class="icone icone-lg"><use href="#i-alerta"></use></svg>
+                <p>
+                    <strong>Atenção, motorista!</strong> Antes de vir para o Pátio de Insumos, leia o
+                    <a href="#comunicado">Comunicado de Segurança no Trânsito Interno</a>
+                    &mdash; regras de estacionamento, EPI's obrigatórios e caminho seguro até a sala de controle.
+                </p>
+            </div>
+
+            <div class="espaco">
+                <div class="linha">
+                    <div class="barra">
+                        <div class="info">
+                            <a href="https://maps.app.goo.gl/QqJWcJ15hoZxmcUq8">
+                                <img src="imagens/location.gif" width="80" alt="Ícone de localização">
+                                Pátio de Insumos (Maps)
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="dica-container">
-        <h1>Dica:</h1>
-        <p>Basta clicar no botão <strong>"Começar"</strong> para iniciar a rota diretamente.</p>
-        <img src="imagens/Image.png" alt="Instrução de rota">
-    </section>
-    </body>
+        <section class="comunicado" id="comunicado">
+            <article class="comunicado-card">
+                <header class="comunicado-topo">
+                    <span class="etiqueta">Comunicado de Segurança</span>
+                    <h2>Segurança no Trânsito Interno</h2>
+                    <p class="comunicado-local">
+                        <svg class="icone"><use href="#i-pin"></use></svg>
+                        Pátio de Insumos
+                    </p>
+                </header>
+
+                <div class="alerta">
+                    <svg class="icone icone-lg"><use href="#i-alerta"></use></svg>
+                    <div>
+                        <h3>Atenção Motoristas</h3>
+                        <p>
+                            Com o objetivo de garantir a segurança de todos os empregados, contratados e visitantes
+                            que circulam em nossa área, reforçamos a importância do cumprimento das normas de
+                            trânsito interno.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bloco bloco-rota">
+                    <h3 class="bloco-titulo">
+                        <svg class="icone"><use href="#i-rota"></use></svg>
+                        Chegada ao Pátio de Insumos
+                    </h3>
+                    <p>
+                        Após chegar ao Pátio de Insumos, <strong>estacionar o caminhão nas vagas determinadas para
+                        carretas ao lado esquerdo do Galpão de Alvenaria</strong>. Após isso, se apresentar na sala de
+                        controle utilizando o caminho seguro (<span class="destaque-verde">caminho verde</span>).
+                    </p>
+                </div>
+
+                <div class="bloco">
+                    <h3 class="bloco-titulo">
+                        <svg class="icone"><use href="#i-capacete"></use></svg>
+                        EPI's básicos para a área operacional
+                    </h3>
+                    <p class="bloco-intro">Favor estar portando:</p>
+                    <ul class="epi-lista">
+                        <li><svg class="icone icone-check"><use href="#i-check"></use></svg>Capacete com jugular</li>
+                        <li><svg class="icone icone-check"><use href="#i-check"></use></svg>Abafador</li>
+                        <li><svg class="icone icone-check"><use href="#i-check"></use></svg>Óculos de proteção</li>
+                        <li><svg class="icone icone-check"><use href="#i-check"></use></svg>Colete refletor</li>
+                        <li><svg class="icone icone-check"><use href="#i-check"></use></svg>Botina</li>
+                    </ul>
+                </div>
+
+                <div class="regras">
+                    <article class="regra">
+                        <h3>
+                            <svg class="icone"><use href="#i-carro"></use></svg>
+                            Estacionamento
+                        </h3>
+                        <ul>
+                            <li>Estacione somente em locais devidamente sinalizados.</li>
+                            <li>Respeite as vagas reservadas e áreas restritas.</li>
+                            <li>Estacione o veículo de ré.</li>
+                            <li>Não bloqueie vias de circulação, acessos de emergência ou passagens de pedestres.</li>
+                            <li>Mantenha o veículo dentro dos limites demarcados da vaga.</li>
+                        </ul>
+                    </article>
+
+                    <article class="regra regra-limite">
+                        <h3>
+                            <svg class="icone"><use href="#i-velocidade"></use></svg>
+                            Limite de Velocidade
+                        </h3>
+                        <p class="limite">20<span>km/h</span></p>
+                        <ul>
+                            <li>Respeite rigorosamente a velocidade máxima permitida na área.</li>
+                            <li>Reduza a velocidade em cruzamentos, curvas e áreas com circulação de pedestres.</li>
+                            <li>Mantenha atenção constante às sinalizações e orientações locais.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="bloco bloco-medidas">
+                    <h3 class="bloco-titulo">
+                        <svg class="icone"><use href="#i-escudo"></use></svg>
+                        Medidas em caso de descumprimento
+                    </h3>
+                    <p>
+                        Visando fortalecer a cultura de segurança e o cumprimento das normas estabelecidas, serão
+                        adotadas as seguintes medidas:
+                    </p>
+                    <ol class="medidas">
+                        <li>
+                            <span class="passo">1</span>
+                            <div>
+                                <strong>Primeira ocorrência</strong>
+                                <p>Advertência formal ao condutor.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="passo passo-grave">2</span>
+                            <div>
+                                <strong>Segunda ocorrência</strong>
+                                <p>Bloqueio da autorização de circulação/acesso do veículo na área.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="fecho">
+                    <svg class="icone icone-lg"><use href="#i-escudo-check"></use></svg>
+                    <div>
+                        <h3>Segurança é responsabilidade de todos</h3>
+                        <p>
+                            O descumprimento das normas de trânsito interno aumenta o risco de acidentes, coloca
+                            pessoas em perigo e compromete a segurança das operações.
+                        </p>
+                        <p>Contamos com a colaboração de todos para manter um ambiente seguro e organizado.</p>
+                        <p class="slogan">Dirija com segurança. Respeite as regras. Preserve vidas.</p>
+                    </div>
+                </div>
+
+                <div class="mapas">
+                    <h3 class="bloco-titulo">
+                        <svg class="icone"><use href="#i-pin"></use></svg>
+                        Mapas do Pátio
+                    </h3>
+                    <div class="mapas-grid">
+                        <figure>
+                            <a href="imagens/Captura%20de%20tela%202026-11-09%20115511.png" target="_blank" rel="noopener">
+                                <img src="imagens/Captura%20de%20tela%202026-11-09%20115511.png"
+                                     alt="Mapa aéreo do Pátio de Insumos indicando entrada e saída, balança rodoviária, corredores B/C e A/B, áreas em amarelo para estacionamento permitido, em vermelho para não parar e em verde para início da fila da balança.">
+                            </a>
+                            <figcaption>
+                                <strong>Mapa 1 &mdash; Entrada, saída e balança.</strong>
+                                Amarelo: estacionamento permitido. Vermelho: não permitido parar/estacionar.
+                                Verde: início da fila para entrada da balança.
+                            </figcaption>
+                        </figure>
+
+                        <figure>
+                            <a href="imagens/Captura%20de%20tela%202026-11-09%20115532.png" target="_blank" rel="noopener">
+                                <img src="imagens/Captura%20de%20tela%202026-11-09%20115532.png"
+                                     alt="Mapa aéreo do Pátio de Insumos mostrando as faixas de pedestre em verde, a passagem de pedestre e as vagas demarcadas em amarelo com 2,7 metros de largura.">
+                            </a>
+                            <figcaption>
+                                <strong>Mapa 2 &mdash; Faixas de pedestre e vagas.</strong>
+                                Utilize sempre as faixas verdes de pedestre. Vagas demarcadas com 2,7 m de largura.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p class="mapas-dica">Clique em uma imagem para ampliar.</p>
+                </div>
+
+                <footer class="assinatura">
+                    <p>Atenciosamente,</p>
+                    <strong>Gerência de Operação de Insumos</strong>
+                </footer>
+            </article>
+        </section>
+
+        <section class="dica-container">
+            <h1>Dica:</h1>
+            <p>Basta clicar no botão <strong>"Começar"</strong> para iniciar a rota diretamente.</p>
+            <img src="imagens/Image.png" alt="Instrução de rota">
+        </section>
+    </main>
+</body>
 </html>
